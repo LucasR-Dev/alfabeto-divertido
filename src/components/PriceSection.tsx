@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Check, Sparkles } from "lucide-react";
 
+const PAYMENT_URL = "https://buy.braip.com/checkout/plapzq6z/chez0zpp?currency=BRL";
+
 const PriceSection = () => {
   return (
     <section id="preco" className="py-16 md:py-24 bg-hero-gradient relative overflow-hidden">
@@ -78,9 +80,11 @@ const PriceSection = () => {
               </div>
 
               {/* CTA Button */}
-              <Button variant="cta" size="xl" className="w-full mb-4">
-                <ShoppingCart className="w-5 h-5" />
-                Comprar Agora por R$ 11,99
+              <Button variant="cta" size="xl" className="w-full mb-4" asChild>
+                <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
+                  <ShoppingCart className="w-5 h-5" />
+                  Comprar Agora por R$ 11,99
+                </a>
               </Button>
 
               <p className="text-sm text-muted-foreground">
