@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, ArrowUp } from "lucide-react";
 
+const PAYMENT_URL = "https://buy.braip.com/checkout/plapzq6z/chez0zpp?currency=BRL";
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  const scrollToPrice = () => {
-    document.getElementById("preco")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-card border-t border-border">
       {/* Final CTA */}
@@ -22,9 +19,11 @@ const Footer = () => {
             Por apenas R$ 11,99, seu filho vai aprender o alfabeto de forma
             divertida e criativa.
           </p>
-          <Button variant="cta" size="xl" onClick={scrollToPrice}>
-            <ShoppingCart className="w-5 h-5" />
-            Comprar por R$ 11,99
+          <Button variant="cta" size="xl" asChild>
+            <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
+              <ShoppingCart className="w-5 h-5" />
+              Comprar por R$ 11,99
+            </a>
           </Button>
         </div>
       </div>

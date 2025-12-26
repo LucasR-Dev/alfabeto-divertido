@@ -2,11 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Sparkles, Star } from "lucide-react";
 import capaAbc from "@/assets/capa-abc.png";
 
-const HeroSection = () => {
-  const scrollToPrice = () => {
-    document.getElementById("preco")?.scrollIntoView({ behavior: "smooth" });
-  };
+const PAYMENT_URL = "https://buy.braip.com/checkout/plapzq6z/chez0zpp?currency=BRL";
 
+const HeroSection = () => {
   return (
     <section className="relative bg-hero-gradient overflow-hidden py-12 md:py-20">
       {/* Decorative elements */}
@@ -56,9 +54,11 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="cta" size="xl" onClick={scrollToPrice}>
-                <ShoppingCart className="w-5 h-5" />
-                Quero Comprar Agora!
+              <Button variant="cta" size="xl" asChild>
+                <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
+                  <ShoppingCart className="w-5 h-5" />
+                  Quero Comprar Agora!
+                </a>
               </Button>
               <Button
                 variant="outline"
