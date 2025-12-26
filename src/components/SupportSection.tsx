@@ -14,8 +14,8 @@ const SupportSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 max-w-2xl mx-auto">
+          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300 w-full md:w-1/2">
             <div className="w-14 h-14 bg-rainbow-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Mail className="w-7 h-7 text-rainbow-blue" />
             </div>
@@ -27,11 +27,11 @@ const SupportSection = () => {
               href="mailto:suporte@abcparacolorir.com.br"
               className="text-primary hover:underline font-medium"
             >
-              suporte@abcparacolorir.com.br
+              abcparacolorir@gmail.com
             </a>
           </div>
-
-          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300">
+          {/*
+          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300 w-full md:w-1/2">
             <div className="w-14 h-14 bg-rainbow-green/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               <MessageCircle className="w-7 h-7 text-rainbow-green" />
             </div>
@@ -48,8 +48,8 @@ const SupportSection = () => {
               (11) 99999-9999
             </a>
           </div>
-
-          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300">
+          */}
+          <div className="bg-background rounded-2xl p-6 text-center shadow-card hover:shadow-playful transition-all duration-300 w-full md:w-1/2">
             <div className="w-14 h-14 bg-rainbow-yellow/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Clock className="w-7 h-7 text-rainbow-yellow" />
             </div>
